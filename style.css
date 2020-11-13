@@ -265,6 +265,12 @@ html
     box-shadow: 0.3rem 0.3rem 0.5rem #777;
     position: relative;
     overflow: hidden;
+    transition: box-shadow 0.5s;
+}
+
+.project:hover
+{
+    box-shadow: 1rem 1rem 1rem #777;
 }
 
 .project-text
@@ -273,12 +279,14 @@ html
     letter-spacing: 0.1rem;
     position: absolute;
     top: -10rem;
+    z-index: 10;
     transition: top 0.3s;
 }
 
 .project:hover .project-text
 {
     top: 5rem;
+    transition: top 0.3s 0.2s;
 }
 
 .project-name
@@ -323,5 +331,6 @@ html
 .project:hover .project-link
 {
     bottom: 5rem;
+    transition: bottom 0.3s 0.2s;
 }
 /* End of Section 3 */
