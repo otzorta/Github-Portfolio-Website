@@ -14,6 +14,7 @@
 html
 {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 .center
@@ -107,6 +108,14 @@ html
     height: 4rem;
     background-color: #e41c6f;
     box-shadow: 0.2rem00.2rem 0.5rem #555;
+    position: absolute;
+    z-index: 300;
+}
+
+.sticky
+{
+    position: fixed;
+    top: 0;
 }
 
 .navbar-link
@@ -119,6 +128,11 @@ html
     text-transform: uppercase;
     position: relative;
     transition: color 0.2s;
+}
+
+.change.navbar-link
+{
+    color: #fff;
 }
 
 .navbar-link:hover
@@ -136,6 +150,11 @@ html
     right: -15%;
     bottom: 0.3rem;
     transition: width 0.2s;
+}
+
+.change.navbar-link::before
+{
+    width: 130%;
 }
 
 .navbar-link:hover::before
