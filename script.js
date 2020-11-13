@@ -14,15 +14,15 @@ window.addEventListener('scroll', () =>
         navbar.classList.remove('sticky');
     }
 
-    sections.forEach(section, i) =>
+    sections.forEach((section, i) =>
         {
-            if(window.pageYOffset >= section.offsetTop - 10)
+            if(window.pageYOffset >= section.offsetTop -10)
             {
-                navbarLinks.forEach(navbarLinks =>
+                navbarLinks.forEach(navbarLink =>
                     {
-                        navbarLinks.classList.remove('change');
+                        navbarLink.classList.remove('change');
                     })
                 navbarLinks[i].classList.add('change');
             }
-        })
-})
+        });
+});
