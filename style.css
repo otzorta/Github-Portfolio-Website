@@ -107,15 +107,28 @@ html
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     position: relative;
+    transition: color 0.2s;
 }
 
-.navbar-link::before{
+.navbar-link:hover
+{
+    color: #fff;
+}
+
+.navbar-link::before
+{
     content: "";
-    width: 130%;
+    width: 0;
     height: 0.2rem;
     background-color: #fff;
     position: absolute;
     right: -15%;
     bottom: 0.3rem;
+    transition: width 0.2s;
+}
+
+.navbar-link:hover::before
+{
+    width: 130%;
 }
 /* End of Navbar */
